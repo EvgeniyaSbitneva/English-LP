@@ -1,0 +1,72 @@
+// Variables
+
+$text-color: #141414;
+$heading-color: #000000;
+$btn-color: #f5112c;
+$bg-grey: #f8f8f8;
+
+// Mixins
+
+@mixin reset-indents {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin reset-list {
+	@include reset-indents;
+	list-style: none;
+}
+
+@mixin reset-link {
+	font: inherit;
+	text-decoration: none;
+}
+
+/* Scaffolding */
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-width: 320px;
+  @include reset-indents;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Gilroy", "Tahoma", sans-serif;
+  text-align: center;
+  color: $text-color;
+}
+
+.heading {
+	font-weight: 900;
+	font-size: 24px;
+	line-height: 1.4;
+	color: $heading-color;
+}
