@@ -2,29 +2,35 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Школа Английского языка .YES</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="page-header">
 		<a class="page-header__logo logo">
-			<img src="#" alt="Школа Английского языка .YES">
+			<img src="img/Logo-YES.svg" width="64" alt="Школа Английского языка .YES">
 		</a>
 		<p class="page-header__address">г. Москва ул. Северная, 35</p>
 		<div class="page-header__call-to-action call-to-action">
-			<a class="call-to-action__tel" href="tel:+7945465467">+7 (945) 46-54-67</a>
-			<a href="#" class="call-to-action__call-back open-modal">Заказать звонок</a>
+			<a class="call-to-action__tel page-header__tel" href="tel:+7945465467">+7 (945) 46-54-67</a>
+			<a href="#" class="call-to-action__call-back page-header__call-back open-modal">Заказать звонок</a>
 		</div>
 	</header>
 
 	<main class="page-main">
 		<section class="banner banner--top">
-			<h1 class="banner__heading heading">
-				<span>Ускоренный</span> 
-				2-месячный курс английского языка
-			</h1>
-			<p class="banner__offer">Освойте английский для путешествий<br>и научитесь объясняться в любой ситуации</p>
-			<a href="#" class="banner__btn btn">Записаться на пробное занятие</a>
+			<div class="banner__img-wrap">
+				<img class="banner__img" src="img/bus.png" width="243" alt="Лондонский автобус">
+			</div>
+			<div class="banner__text-wrap">
+				<h1 class="banner__heading heading">
+					<small>Ускоренный</small> 
+					2-месячный курс<br>английского языка
+				</h1>
+				<p class="banner__offer">Освойте английский для путешествий<br>и научитесь объясняться в любой ситуации</p>
+				<a href="#" class="banner__btn btn">Записаться на пробное занятие</a>
+			</div>
 		</section>
 
 		<section class="motivation">
@@ -32,22 +38,30 @@
 			<div class="motivation__item">
 				<span class="motivation__number">01</span>
 				<p class="motivation__text">Вы думали, что знаете английский, но в гостинице с трудом выговариваете, какой номер вам нужен</p>
-				<img class="motivation__img" src="#" alt="Гостиница">
+				<div class="motivation__img motivation__img--hotel">
+					<img src="img/hotel.jpg" width="407" alt="Гостиница">
+				</div>
 			</div>
 			<div class="motivation__item">
 				<span class="motivation__number">02</span>
 				<p class="motivation__text">Вы смогли спросить, до какой станции метро нужно дойти, но не поняли, куда вас отправили</p>
-				<img class="motivation__img" src="#" alt="Направление">
+				<div class="motivation__img motivation__img--compas">
+					<img src="img/compas.jpg" width="344" alt="Направление">
+				</div>
 			</div>
 			<div class="motivation__item">
 				<span class="motivation__number">03</span>
 				<p class="motivation__text">В аэропорту при любом подозрении на задрежку, вы ищите представителя, хоть как-то говоряшего по-русски</p>
-				<img class="motivation__img" src="#" alt="Аэропорт">
+				<div class="motivation__img motivation__img--airport">
+					<img src="img/airport.jpg" width="343" alt="Аэропорт">
+				</div>
 			</div>
 			<div class="motivation__item">
-				<span class="motivation__number motivation__number--final">в итоге...</span>
+				<span class="motivation__number motivation__number--final heading">в итоге...</span>
 				<p class="motivation__text">Все это портит впечатление от отдыха и отбивает желание посещать новые страны</p>
-				<img class="motivation__img" src="#" alt="Разочарование">
+				<div class="motivation__img motivation__img--socks">
+					<img src="img/socks.jpg" width="346" alt="Разочарование">
+				</div>
 			</div>
 		</section>
 
@@ -73,19 +87,25 @@
 			<h2 class="teachers__heading heading">Кто ведет курс</h2>
 			<ul class="teachers__list">
 				<li class="teachers__item">
-					<img class="teachers__photo" src="#" alt="Алла Ристовская">
 					<h3 class="teachers__name">Алла Ристовская</h3>
 					<p class="teachers__text">Занимается преподаванием английского языка с 2007 года. За 7 лет практики Алла занималась более чем с 80 студентами. Очень любит путешествовать: неоднократно бывала зарубежом, проходила практику в США (Нью-Йорк) и Великобритании (Лондон).</p>
+					<div class="teachers__img-wrap">
+						<img class="teachers__photo" src="img/ristovskaia.jpg" alt="Алла Ристовская">
+					</div>
 				</li>
 				<li class="teachers__item">
-					<img class="teachers__photo" src="#" alt="Анастасия Левчук">
 					<h3 class="teachers__name">Анастасия Левчук</h3>
 					<p class="teachers__text">Закончила Алтайскую Государственную педагогическую Академию по специальности "теория и методика преподавания иностранных языков и культур". Также имеется дополнительная квалификация "переводчик в сфере профессиональной коммуникации".</p>
+					<div class="teachers__img-wrap">
+						<img class="teachers__photo" src="img/levchuk.jpg" alt="Анастасия Левчук">
+					</div>
 				</li>
 				<li class="teachers__item">
-					<img class="teachers__photo" src="#" alt="Евгений Пак">
 					<h3 class="teachers__name">Евгений Пак</h3>
 					<p class="teachers__text">Сетифицированный спеуиалист (диплом ОмГПУ, TTC в Кембридже, TESOL в Лондоне). Имеет богатый опыт работы на английском языке: от обучения в языковых школах до выполнения функции переводчика на различных конференциях.<br>Более года Евгений жил в г. Сиэтл (США).</p>
+					<div class="teachers__img-wrap">
+						<img class="teachers__photo" src="img/pak.jpg" alt="Евгений Пак">
+					</div>
 				</li>
 			</ul>
 		</section>
