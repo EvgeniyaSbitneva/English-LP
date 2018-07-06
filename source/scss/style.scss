@@ -52,6 +52,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: block;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -92,6 +96,10 @@ body {
     font-size: 18px;
     line-height: 28px;
   }
+}
+
+.page-header {
+  display: block;
 }
 
 .page-main {
@@ -177,7 +185,7 @@ body {
 
 /* Page header */
 
-.page-header {
+.page-header__wrap {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -632,6 +640,8 @@ body {
   @include reset-list;
   margin-bottom: 20px;
 
+  font-weight: 800;
+
   &::before {
     content: "";
 
@@ -682,6 +692,10 @@ body {
 .teachers {
   max-width: 780px;
   margin: 0 auto;
+
+  @media (min-width: 1170px) {
+    max-width: 1170px;
+  }
 }
 
 .teachers__list {
@@ -691,7 +705,7 @@ body {
 
   @media (min-width: 750px) {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;   
   }
 }
 
@@ -699,10 +713,12 @@ body {
   display: flex;
   flex-direction: column;
   padding: 0 15px;
-
+  max-width: 390px;
+  margin: 0 auto;
+  
   @media (min-width: 750px) {
     width: 50%;
-    max-width: 390px;
+    margin: 0;
   }
 
   @media (min-width: 1170px) {
@@ -717,6 +733,10 @@ body {
 .teachers__photo {
   display: block;
   width: 100%;
+}
+
+.teachers__name {
+  font-weight: 800;
 }
 
 /* Program */
@@ -956,7 +976,7 @@ body {
 /* 1170px - centered */
 
 @media (min-width: 1170px) {
-  .page-header,
+  .page-header__wrap,
   .banner__wrap,
   .motivation__wrap,
   .features,
@@ -965,7 +985,7 @@ body {
   .algorithm,
   .reviews,
   .page-footer__wrap {
-    max-width: 1170px;
+    width: 1170px;
     margin: 0 auto;
   }
 }
