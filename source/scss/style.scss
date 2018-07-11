@@ -692,9 +692,22 @@ body {
 .teachers {
   max-width: 780px;
   margin: 0 auto;
+  padding: 0 15px;
 
   @media (min-width: 1170px) {
     max-width: 1170px;
+  }
+}
+
+.teachers__heading {
+  margin-bottom: 30px;
+
+  @media (min-width: 750px) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 1170px) {
+    text-align: left;
   }
 }
 
@@ -712,17 +725,42 @@ body {
 .teachers__item {
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
   max-width: 390px;
   margin: 0 auto;
   
   @media (min-width: 750px) {
-    width: 50%;
-    margin: 0;
+    width: 48%;
+    margin: 0 2%;
+
+    &:first-of-type,
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
   }
 
   @media (min-width: 1170px) {
-    width: 33.3%;
+    width: 360px;
+    margin: 0 1.3%;
+
+    &:nth-of-type(2n+1) {
+      margin-left: 1.3%;
+    }
+
+    &:nth-of-type(2n) {
+      margin-right: 1.3%;
+    }
+
+    &:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
+
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -736,7 +774,20 @@ body {
 }
 
 .teachers__name {
+  @include reset-indents;
+  margin-top: 24px;
+  margin-bottom: 15px;
+
   font-weight: 800;
+
+  @media (min-width: 750px) {
+    margin-top: 30px;
+  }
+}
+
+.teachers__text {
+  @include reset-indents;
+  margin-bottom: 40px;
 }
 
 /* Program */
@@ -747,7 +798,49 @@ body {
 
   @media (min-width: 750px) {
     flex-direction: row-reverse;
+
+    text-align: left;
   }
+}
+
+.program__heading {
+  margin-top: 35px;
+  margin-bottom: 30px;
+
+  @media (min-width: 400px) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: 750px) {
+    margin-top: 40px;
+    margin-bottom: 55px;
+  }
+}
+
+.program__price {
+  display: block;
+  margin-bottom: 15px;
+
+  font-weight: 300;
+  font-size: 24px;
+  color: $btn-color;
+
+  @media (min-width: 750px) {
+    margin-bottom: 20px;
+
+    font-size: 30px;
+  }
+
+  @media (min-width: 1170px) {
+    font-size: 45px;
+  }
+}
+
+.program__summary {
+  @include reset-indents;
+  margin-bottom: 30px;
 }
 
 .program__img {
@@ -773,6 +866,11 @@ body {
 .program__wrap {
   padding: 0 15px;
 
+  @media (max-width: 750px) {
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
   @media (min-width: 750px) {
     flex-shrink: 0;
     width: 625px;
@@ -794,10 +892,31 @@ body {
   }
 }
 
-.program__item-heading {
+.program__item {
   @media (min-width: 750px) {
-    margin-top: 0;
+    min-height: 135px;
   }
+}
+
+.program__item-heading {
+  @include reset-indents;
+  margin-bottom: 12px;
+
+  font-weight: 800;
+  font-size: 14px;
+
+  @media (min-width: 750px) {
+    font-size: 16px;
+  }
+
+  @media (min-width: 1170px) {
+    font-size: 18px;
+  }
+}
+
+.program__text {
+  @include reset-indents;
+  margin-bottom: 24px;
 }
 
 /* Algorithm */
