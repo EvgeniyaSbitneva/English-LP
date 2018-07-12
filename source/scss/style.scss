@@ -239,6 +239,56 @@ body {
       }
     }
   }
+
+  &--bottom {
+    .banner__img-wrap {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 749px) {
+      .banner__offer {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    @media (min-width: 750px) {
+      .banner__img {
+        width: 695px;
+        margin-left: -345px;
+      }
+
+      .banner__img-wrap {
+        width: 50%;
+      }
+
+      .banner__text-wrap {
+        width: 50%;
+      }
+
+      .banner__btn {
+        width: 90%;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      .banner__img {
+        width: 795px;
+        margin-left: -300px;
+      }
+
+      .banner__img-wrap {
+        width: 60%;
+
+        text-align: center;
+      }
+
+      .banner__text-wrap {
+        width: 40%;
+      }
+    }
+  }
 }
 
 .banner__wrap {
@@ -286,7 +336,7 @@ body {
 
 .banner__offer {
   @include reset-indents;
-  margin: 12px 0;
+  margin: 12px 0 20px;
 
   @media (min-width: 750px) {
     margin-bottom: 35px;
@@ -305,7 +355,13 @@ body {
 
   @media (min-width: 750px) {
     width: 78%;
-    max-width: 370px;
+    max-width: 380px;
+
+    font-size: 14px;
+  }
+
+  @media (min-width: 1170px) {
+    font-size: 18px;
   }
 }
 
@@ -1035,11 +1091,16 @@ body {
 /* Reviwes */
 
 .reviews {
+  margin-bottom: 50px;
   padding: 0 15px;
 
   @media (min-width: 750px) {
     text-align: left;
   }
+}
+
+.reviews__list {
+  margin-bottom: 80px;
 }
 
 .reviews__heading {
