@@ -920,7 +920,13 @@ body {
 }
 
 /* Algorithm */
+.algorithm {
+  padding-top: 80px;
+  padding-bottom: 100px;
 
+  background: url(../img/circle-grey.svg) center no-repeat;
+  background-size: auto 100%;
+}
 .algorithm__list {
   @include reset-list;
 }
@@ -932,14 +938,21 @@ body {
 }
 
 .algorithm__heading {
+  margin-bottom: 60px;
+
   @media (min-width: 750px) {
-    width: 33.3%;
+    width: 44%;
+
+    text-align: left;
   }
 }
 
 .algorithm__item {
   @media (min-width: 750px) {
     display: flex;
+    align-items: center;
+
+    padding-bottom: 70px;
 
     &:nth-of-type(even) {
       flex-direction: row-reverse;
@@ -955,9 +968,58 @@ body {
   }
 }
 
+.algorithm__item-heading {
+  position: relative;
+
+  display: inline-block;
+  @include reset-indents;
+  width: auto;
+  margin-bottom: 12px;
+  padding: 0 30px;
+
+  font-weight: 800;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 15px;
+
+    background: url(../img/arrow.png) center no-repeat;
+    background-size: 100%;
+  }
+}
+
+.algorithm__text {
+  @include reset-indents;
+  margin-bottom: 24px;
+
+  @media (max-width: 749px) {
+    max-width: 365px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (min-width: 750px) {
+    margin-bottom: 0;
+    padding-left: 30px;
+  }
+}
+
 .algorithm__img {
+  margin-bottom: 40px;
+
+  img {
+    display: block;
+  }
+
   @media (min-width: 750px) {
     width: 50%;
+    margin-bottom: 0;
 
     img {
       width: 100%;
@@ -1101,7 +1163,7 @@ body {
   .features,
   .teachers,
   .program,
-  .algorithm,
+  .algorithm__wrap,
   .reviews,
   .page-footer__wrap {
     width: 1170px;
