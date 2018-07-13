@@ -183,7 +183,7 @@ body {
   position: relative;
 
   display: inline-block;
-  padding-bottom: 7px;
+  // padding-bottom: 7px;
 
   color: $btn-color;
 
@@ -191,7 +191,7 @@ body {
     content: "";
 
     position: absolute;
-    bottom: 0;
+    bottom: -7px;
     left: 0;
 
     width: 100%;
@@ -213,6 +213,10 @@ body {
   
   line-height: 20px;
   color: $text-color;
+
+  @media (min-width: 1170px) {
+    padding-top: 30px;
+  }
 }
 
 .page-header__logo {
