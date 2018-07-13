@@ -180,7 +180,25 @@ body {
 }
 
 .call-to-action__call-back {
+  position: relative;
+
+  display: inline-block;
+  padding-bottom: 7px;
+
   color: $btn-color;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: $btn-color;
+  }
 }
 
 /* Page header */
@@ -1262,33 +1280,49 @@ body {
 }
 
 .page-footer__wrap {
-  padding: 0 15px;
+  padding: 50px 15px;
 
   @media (min-width: 750px) {
     display: flex;
+    align-items: baseline;
   }
 }
 
 .page-footer__right-wrap {
   @media (min-width: 750px) {
     margin-left: auto;
+
+    text-align: right;
   }
   @media (min-width: 1170px) {
-    margin-left: 0;
+    margin-left: auto;
   }
 }
 
 .page-footer__left-wrap {
+  @media (min-width: 750px) {
+    text-align-last: left;
+  }
+
   @media (min-width: 1170px) {
     display: flex;
     align-items: flex-end;
-    width: 780px;
+    width: 750px;
   }
 }
 
+.page-footer__descripton {
+  @include reset-indents;
+  margin-bottom: 8px;
+}
+
 .page-footer__address {
+  @include reset-indents;
+  margin-bottom: 15px;
+
   @media (min-width: 1170px) {
     margin-left: auto;
+    margin-bottom: 13px;
   }
 }
 
@@ -1302,43 +1336,66 @@ body {
   }
 }
 
-
-
 .page-footer__logo {
-  margin: 0 auto;
+  margin: 0 auto 15px;
+
+  @media (min-width: 750px) {
+    margin-left: 0;
+    margin-bottom: 16px;
+  }
 }
+
+.page-footer__tel {
+  margin-bottom: 7px;
+}
+
+
+/* Social */
 
 .social {
   @include reset-list;
   display: flex;
   justify-content: center;
+  margin-bottom: 24px;
+
+  @media (min-width: 750px) {
+    justify-content: flex-end;
+    margin-bottom: 18px;
+  }
 } 
 
 .social__item {
   width: 40px;
   height: 40px;
 
-  background-position: center center;
+  background-position: right bottom;
   background-repeat: no-repeat;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
 
   &--vk {
-    margin-right: 10px;
+    background-position: center 15px;
+    margin-right: 18px;
 
     background-image: url(../img/vk.svg);
   }
 
   &--insta {
-    margin-right: 8px;
+    margin-right: 14px;
 
     background-image: url(../img/insta.svg);
-    background-size: 80%;
+    background-size: 78%;
   }
 
   &--youtube {
-    margin-right: 3px;
+    margin-right: 8px;
 
     background-image: url(../img/yt.svg);
-    background-size: 70%;
+    background-size: 67%;
   }
 
   &--ok {
