@@ -1492,8 +1492,6 @@ body {
   width: 40px;
   height: 40px;
 
-  background-position: right bottom;
-  background-repeat: no-repeat;
   opacity: 0.2;
 
   cursor: pointer;
@@ -1504,10 +1502,12 @@ body {
   }
 
   &--vk {
-    background-position: center 15px;
     margin-right: 18px;
 
     background-image: url(../img/vk.svg);
+    background-size: 100% 23px;
+    background-position: right bottom 3px;
+    background-repeat: no-repeat;
   }
 
   &--insta {
@@ -1515,18 +1515,24 @@ body {
 
     background-image: url(../img/insta.svg);
     background-size: 78%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
   }
 
   &--youtube {
     margin-right: 8px;
 
     background-image: url(../img/yt.svg);
-    background-size: 67%;
+    background-size: auto 75%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
   }
 
   &--ok {
     background-image: url(../img/ok.svg);
-    background-size: 50%;
+    background-size: auto 80%;
+    background-position: right bottom;
+    background-repeat: no-repeat;
   }
 }
 
