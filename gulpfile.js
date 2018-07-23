@@ -14,8 +14,8 @@ var minify = require('gulp-csso');
 var del = require("del");
 var server = require("browser-sync").create();
 
-gulp.task("style", function(callback) {
-  gulp.src("source/scss/style.scss")
+gulp.task("style", function() {
+  return gulp.src("source/scss/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
@@ -25,8 +25,7 @@ gulp.task("style", function(callback) {
     .pipe(minify())
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("dist/css"))
-    .pipe(server.reload({ stream:true }))
-    callback();
+    .on("end", server.reload);
 });
 
 gulp.task("images", function() {
@@ -58,11 +57,7 @@ gulp.task("html", function () {
 
 gulp.task("serve", function() {
   server.init({
-    server: "dist/",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
+    server: "dist/"
   });
 
   gulp.watch("source/scss/**/*.scss", gulp.series("style"));
