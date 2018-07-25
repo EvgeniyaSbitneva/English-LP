@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Школа Английского языка .YES</title>
-	<link rel="stylesheet" href="swipe_slider/css/swiper.min.css">
+	<link rel="stylesheet" href="vendor/swipe_slider/css/swiper.min.css">
 	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
 			<div class="page-header__call-to-action call-to-action">
 				<a class="call-to-action__tel page-header__tel" href="tel:+7945465467">+7 (945) 46-54-67</a>
 				<div class="call-to-action__link-wrap">
-					<a href="#" class="call-to-action__call-back page-header__call-back open-modal">Заказать звонок</a>
+					<a href="call-back.html" class="call-to-action__call-back page-header__call-back open-modal">Заказать звонок</a>
 				</div>
 			</div>
 		</div>
@@ -35,7 +35,7 @@
 						2-месячный курс<br>английского языка
 					</h1>
 					<p class="banner__offer">Освойте английский для путешествий<br>и научитесь объясняться в любой ситуации</p>
-					<a href="#" class="banner__btn btn">Записаться на пробное занятие</a>
+					<a href="call-back.html" class="banner__btn btn open-modal">Записаться на пробное занятие</a>
 				</div>
 			</div>
 		</section>
@@ -258,7 +258,7 @@
 				<div class="banner__text-wrap">
 					<h2 class="banner__heading heading">бесплатное пробное занятие</h2>
 					<p class="banner__offer">Приходите на бесплатное первое занятие по теме “аэропорт” и ощутите пользу сразу!</p>
-					<a href="#" class="banner__btn btn">Записаться на пробное занятие</a>
+					<a href="call-back.html" class="banner__btn btn open-modal">Записаться на пробное занятие</a>
 				</div>
 			</div>
 		</section>
@@ -278,22 +278,22 @@
 			<div class="page-footer__right-wrap">
 				<ul class="page-footer__social social">
 					<li>
-						<a class="social__item social__item--vk" href="https://pomodoro-tracker.com/">
+						<a class="social__item social__item--vk" href="#">
 							<span class="visually-hidden">Вконтакте</span>
 						</a>
 					</li>
 					<li>
-						<a class="social__item social__item--insta" href="https://pomodoro-tracker.com/">
+						<a class="social__item social__item--insta" href="#">
 							<span class="visually-hidden">Инстаграм</span>
 						</a>
 					</li>
 					<li>
-						<a class="social__item social__item--youtube" href="https://pomodoro-tracker.com/">
+						<a class="social__item social__item--youtube" href="#">
 							<span class="visually-hidden">Ютьюб</span>
 						</a>
 					</li>
 					<li>
-						<a class="social__item social__item--ok" href="https://pomodoro-tracker.com/">
+						<a class="social__item social__item--ok" href="#">
 							<span class="visually-hidden">Одноклассники</span>
 						</a>
 					</li>
@@ -301,14 +301,40 @@
 				<div class="page-footer__call-to-action call-to-action">
 					<a class="call-to-action__tel page-footer__tel" href="tel:+7945465467">+7 (945) 46-54-67</a>
 					<div class="call-to-action__link-wrap">
-						<a href="#" class="call-to-action__call-back open-modal">Заказать звонок</a>
+						<a href="call-back.html" class="call-to-action__call-back open-modal">Заказать звонок</a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
 
-	<script src="swipe_slider/js/swiper.min.js"></script>
+	<section class="modal modal--call-back">
+		<div class="modal__wrap">
+			<h2 class="modal__heading heading">Пробное занятие</h2>
+			<p class="modal__description ">Оставьте свой номер телефона и наш оператор свяжется с вами для согласования даты занятия</p>
+			<form class="modal__form contact-form" action="vendor/mailer/smart.php" method="post">
+				<label class="contact-form__item">
+					<span class="visually-hidden">Введите номер телефона</span>
+					<input class="contact-form__input" type="tel" name="tel" required>
+				</label>
+				<button class="btn contact-form__btn" type="submit">Записаться на пробное занятие</button>
+			</form>
+			<button class="modal__toggle modal__close" type="button">
+				<span class="visually-hidden">Закрыть окно</span>
+			</button>
+		</div>
+	</section>
+
+<section class="modal modal--success">
+		<div class="modal__wrap">
+			<h2 class="modal__heading heading">Успешно отправлено</h2>
+			<p class="modal__description ">Спасибо за предоставленные данные. Наш менеджер свяжется с Вами в течение пяти минут.</p>
+			<button class="btn modal__btn modal__close" type="button">Закрыть окно</button>
+		</div>
+	</section>
+
+	<script src="js/script.js"></script>
+	<script src="vendor/swipe_slider/js/swiper.min.js"></script>
 	<script>
 		var mySwiper = new Swiper ('.swiper-container', {
     pagination: {
