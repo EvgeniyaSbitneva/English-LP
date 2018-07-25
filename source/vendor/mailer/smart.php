@@ -35,7 +35,7 @@ if(!$mail->send()) {
     echo "Сообщение не отправлено";
     echo "Ошибка: " . $mail->ErrorInfo;
 } else {
-    header ('Location: /test/thanks.html');
+    header ('Location: ../../thanks.html');
 }
 
 ?>

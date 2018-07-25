@@ -1,4 +1,4 @@
-var link = document.querySelector(".open-modal");
+var links = document.querySelectorAll(".open-modal");
 
 var popup = document.querySelector(".modal--call-back");
 var close = popup.querySelector(".modal__close");
@@ -6,10 +6,12 @@ var close = popup.querySelector(".modal__close");
 var form = popup.querySelector(".contact-form");
 var userTel = popup.querySelector("[name=tel]");
 
-link.addEventListener("click", function (evt) {
-    evt.preventDefault();
-    popup.classList.add("modal--show");
-});
+for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("modal--show");
+    });
+}
 
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
