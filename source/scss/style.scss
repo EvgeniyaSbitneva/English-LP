@@ -26,6 +26,7 @@ $bg-grey: #f8f8f8;
     url('../fonts/Gilroy-ExtraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -35,6 +36,7 @@ $bg-grey: #f8f8f8;
     url('../fonts/Gilroy-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 /* Scaffolding */
@@ -42,11 +44,6 @@ $bg-grey: #f8f8f8;
 * {
   box-sizing: border-box;
 }
-
-// img {
-//   max-width: 100%;
-//   height: auto;
-// }
 
 a {
   text-decoration: none;
@@ -321,7 +318,11 @@ body {
       }
 
       .banner__text-wrap {
-        width: 40%;
+        width: 50%;
+      }
+
+      .banner__btn {
+        width: 100%;
       }
     }
   }
@@ -406,7 +407,8 @@ body {
 
 .banner__btn {
   @media (max-width: 749px) {
-    width: 290px;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
   }
 
