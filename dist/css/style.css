@@ -1193,6 +1193,21 @@ body {
     background-position: right bottom;
     background-repeat: no-repeat; }
 
+/* Top link */
+.top-link {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.6s; }
+
+.top-link--active {
+  opacity: 0.4; }
+
+.top-link:hover {
+  opacity: 1; }
+
 /* PopUp */
 .modal {
   position: fixed;
